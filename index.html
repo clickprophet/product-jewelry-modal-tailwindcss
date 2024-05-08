@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes shimmer {
+      0% {
+        background-position: -1500px 0;
+      }
+
+      100% {
+        background-position: 1500px 0;
+      }
+    }
+
+    .shimmer-bg {
+      animation: shimmer 2s infinite linear;
+      background: linear-gradient(to right, #444 8%, #fff 18%, #444 33%);
+      background-size: 1500px 100%;
+    }
+
+    .gold-border {
+      border: 1px solid #D4AF37;
+    }
+  </style>
+  <title>Luxury Jewelry Modal</title>
+</head>
+
+<body class="bg-gray-900 min-h-screen flex items-center justify-center">
+  <div
+    class="p-10 m-3 md:flex-row flex flex-col items-center space-x-0 space-y-10 md:space-y-0 md:space-x-10 rounded-xl shadow-2xl bg-black/80 backdrop-blur-md">
+    <!-- Image Container -->
+    <div class="transform transition duration-500 hover:scale-105">
+      <img src="images/jewelry-thumb.webp" alt="Elegant Jewelry"
+        class="w-48 h-48 mx-auto rounded-lg gold-border shimmer-bg">
+    </div>
+    <!-- Content Area -->
+    <div class="space-y-6 text-white">
+      <!-- Title & Price Information -->
+      <div class="mb-4 text-center md:text-left">
+        <h1 class="text-3xl font-bold text-gold-300">Diamond Elegance Necklace</h1>
+        <p class="text-xl font-semibold mt-2">$4,999.99</p>
+      </div>
+      <!-- Buy Now Button -->
+      <button
+        class="w-auto px-4 py-2 text-white bg-amber-400 hover:bg-amber-200 rounded-full shadow-sm transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-opacity-50">
+        Buy Now
+      </button>
+
+
+      <!-- Product Features -->
+      <div>
+        <h3 class="text-lg font-semibold">Features:</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>18k Gold Chain</li>
+          <li>1.5 Carat Diamond Pendant</li>
+          <li>Handcrafted and Exquisite Detailing</li>
+        </ul>
+      </div>
+      <!-- Additional Actions -->
+      <div class="flex space-x-4">
+        <button
+          class="flex items-center justify-center py-3 px-5 border border-gold-400 rounded-lg shadow-sm hover:shadow-lg transition-all duration-150">
+          <span class="text-gold-200">More Details</span>
+        </button>
+        <button
+          class="flex items-center justify-center py-3 px-5 border border-gold-400 rounded-lg shadow-sm hover:shadow-lg transition-all duration-150">
+          <span class="text-gold-200">View Collection</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
